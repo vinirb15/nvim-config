@@ -12,6 +12,11 @@ if not pcall(require, "lazy") then
   vim.cmd.quit()
 end
 
+
+-- autoopen and outoclose md server
+vim.g.mkdp_auto_start = 1
+vim.g.mkdp_auto_close = 1
+
 require "lazy_setup"
 require "polish"
 require("telescope").setup{
