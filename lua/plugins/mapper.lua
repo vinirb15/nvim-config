@@ -1,5 +1,4 @@
-local wk = require("which-key")
-
-wk.register({
-  W = { ":noa w<CR>", "Salvar sem autocommands" },
-}, { prefix = "<Space>" })
+-- Salvar sem autocommands com Space + W
+return {
+ vim.keymap.set('n', '<Space>W', ':noa w<CR>', { noremap = true, silent = true })
+}
