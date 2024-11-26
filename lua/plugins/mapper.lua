@@ -5,5 +5,6 @@ return {
   vim.keymap.set('n', '<leader>T', function() vim.cmd('tab split #') end, { noremap = true, silent = true, desc = 'Split tab with alternate file' }),
   vim.keymap.set('n', '<leader>ga', function() require('gitsigns').stage_buffer() end, { noremap = true, silent = true, desc = 'Git add current buffer' }),
   vim.keymap.set('n', '<leader>gA', function() require('gitsigns').undo_stage_buffer() end, { noremap = true, silent = true, desc = 'Git unstage current buffer' }),
-  vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true })
+  vim.api.nvim_set_keymap('t', '<Esc>', '<C-\\><C-n>', { noremap = true, silent = true }),
+  vim.keymap.set("n", "<leader>a", vim.lsp.buf.code_action, { desc = "Correção Rápida" })
 }
