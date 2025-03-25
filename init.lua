@@ -18,7 +18,8 @@ vim.g.mkdp_auto_start = 1
 vim.g.mkdp_auto_close = 1
 
 vim.opt.guifont = "FiraCode Nerd Font:h17"
-vim.cmd([[ autocmd BufWritePre * :set fileformat=dos ]])
+vim.cmd([[ autocmd BufWritePre * :set fileformat=unix ]])
+vim.o.fileformat = "unix"
 
 require "lazy_setup"
 require "polish"
