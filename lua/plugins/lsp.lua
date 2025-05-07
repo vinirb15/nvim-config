@@ -2,7 +2,7 @@ return {
   "VonHeikemen/lsp-zero.nvim",
   branch = "v2.x",
   dependencies = {
-    { "neovim/nvim-lspconfig" }, -- Required
+    { "neovim/nvim-lspconfig" },
   },
   config = function()
     local lsp = require("lsp-zero")
