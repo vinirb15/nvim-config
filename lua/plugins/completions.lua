@@ -9,21 +9,29 @@ return {
 			"rafamadriz/friendly-snippets",
 		},
 	},
-  {
-		"codota/tabnine-nvim",
-		build = "./dl_binaries.sh",
-		config = function()
-		require("tabnine").setup({
-			disable_auto_comment = true,
-			accept_keymap = "<Tab>",
-			dismiss_keymap = "<C-]>",
-			debounce_ms = 800,
-			suggestion_color = { gui = "#808080", cterm = 244 },
-			exclude_filetypes = { "TelescopePrompt" },
-			log_file_path = nil,
-		})
-		end,
-	},
+	-- {
+ --    "github/copilot.vim",
+ --    lazy = false,
+ --    config = function()
+ --      vim.g.copilot_no_tab_map = true
+ --      vim.api.nvim_set_keymap("i", "<C-e>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+ --    end,
+ --  },
+ -- 	{
+	-- 	"codota/tabnine-nvim",
+	-- 	build = "./dl_binaries.sh",
+	-- 	config = function()
+	-- 	require("tabnine").setup({
+	-- 		disable_auto_comment = true,
+	-- 		accept_keymap = "<C-e>",
+	-- 		dismiss_keymap = "<C-]>",
+	-- 		debounce_ms = 800,
+	-- 		suggestion_color = { gui = "#808080", cterm = 244 },
+	-- 		exclude_filetypes = { "TelescopePrompt" },
+	-- 		log_file_path = nil,
+	-- 	})
+	-- 	end,
+	-- },
 	{
 		"hrsh7th/nvim-cmp",
 		config = function()
@@ -44,7 +52,7 @@ return {
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping.complete(),
-					["<C-e>"] = cmp.mapping.abort(),
+					-- ["<C-e>"] = cmp.mapping.abort(),
 					["<CR>"] = cmp.mapping.confirm({ select = true }),
 				}),
 				sources = cmp.config.sources({
