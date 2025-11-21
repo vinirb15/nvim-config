@@ -23,16 +23,3 @@ vim.o.fileformat = "unix"
 
 require "lazy_setup"
 require "polish"
-require("telescope").setup{
-  defaults = {
-    file_ignore_patterns = {
-      "node_modules",
-      "dist",
-      ".git",
-      "public",
-      "venv",
-      "%.spec%.ts$",
-      "%.spec%.js$"
-    }
-  }
-}
